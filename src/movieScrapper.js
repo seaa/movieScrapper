@@ -68,7 +68,7 @@ request(targetUrl, options, function (error, response, html) {
         $(hours).each(function(i, element) {
           if ( $(this).text().length > 1 ) {
             
-            // we need to format the hours, removing 'noon' in favor of 'pm', and substituting '.' with ':'
+            // we need to format the hours, removing 'noon' in favor of 'am', and substituting '.' with ':'
             let formattedHour = ($(this).text()).split('.').join(':');
             if (formattedHour.includes('noon')) {
               formattedHour = formattedHour.split('noon')[0] + ':00am';
